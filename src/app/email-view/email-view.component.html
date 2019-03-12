@@ -1,0 +1,31 @@
+<div class="padding-40">
+  <div class="content-divs">
+    <label>{{createEmail === true ? 'To:' : 'From:'}}</label>
+    <input class="margin-left-20" *ngIf="createEmail" type="text" [(ngModel)]="email.to"/>
+    <label class="margin-left-20" *ngIf="!createEmail"> {{email.from}}</label>
+  </div>
+
+  <div class="content-divs light-bottom-margin">
+    <label>Subject:</label>
+    <input class="margin-left-20" style="width:50%;" *ngIf="createEmail" type="text"  [(ngModel)]="email.subject"/>
+    <label class="margin-left-20" *ngIf="!createEmail" > {{email.subject}}</label>
+  </div>
+
+  <div class="message-area">
+    <textarea rows=5 class="full-width-padding-10" *ngIf="createEmail" type="text" [(ngModel)]="email.text" placeholder="Type your message here"></textarea>
+    <div *ngIf="!createEmail" class="message-view-area">
+      <span style="" > {{email.text}}</span>
+    </div>
+  </div>
+  
+  <div *ngIf="!createEmail" class="action-buttons" class="action-buttons">
+    <!-- Next and Prev Buttons -->
+    <button class="bt" style="margin-right:10px">Prev</button>
+    <button >Next</button>
+  </div>
+  <div *ngIf="createEmail"class="buttons" class="action-buttons">
+    <!-- Send Button -->
+    <button (click)="sendEmail(email)">Send</button>
+  </div>
+  
+</div>

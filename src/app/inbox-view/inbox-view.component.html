@@ -1,0 +1,25 @@
+<div>
+    <ul class="email-list">
+      <li class="email-list-item" *ngFor="let email of emails">
+        <div class="row">
+          <div class="column left">
+            <input type="checkbox" id="{{email.id}}" (change)="handleSelected($event, email)">
+          </div>
+          <div (click)="viewEmail(email)">
+            <div class="column middle" >
+              <p class="overflow-elipis">{{email.from}}</p>
+            </div>
+            <div class="column right" >
+              <p class="overflow-elipis">{{email.subject}}</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <!-- Delete button shows up only when one or more checkboxes are checked -->
+    <div *ngIf="emailsForDelete.length>0">
+      <a class="float">
+        <i class="fas fa-trash-alt my-float"></i>
+      </a>
+    </div>
+</div>

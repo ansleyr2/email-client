@@ -1,0 +1,70 @@
+body{
+  margin: 0px;
+}
+/*The box-sizing property allows us to include the padding and border in an element's total width and height.*/
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+nav a{
+  float: left;
+  text-transform: uppercase;
+  height: 40px;
+  background-color: lightgrey;
+  font-weight: bold;
+  text-decoration: none;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  color: #343a40;
+}
+
+.active-link{
+  background-color: lightblue;
+}
+
+nav a:first-child {
+  padding-right: 20px;
+  border-right: 1px solid black;
+}
+
+nav a:last-child {
+  padding-left: 20px;
+}
+
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 5%;
+}
+
+.right{
+  width: 65%;
+}
+
+.middle {
+  width: 30%;
+}
+.overflow-elipis{
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+button{
+  text-transform: uppercase;
+  width: 80px;
+  height: 30px;
+}

@@ -1,0 +1,32 @@
+.content-divs{
+  height: 50px;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+.margin-left-20{
+  margin-left: 20px;
+}
+.light-bottom-margin{
+  border-bottom: 1px solid grey;
+}
+
+.padding-40{
+  padding-top:40px;
+}
+.message-area{
+  padding:10px;
+  width:100%;
+}
+.message-view-area{
+  height:100px;
+  overflow:overlay;
+}
+.action-buttons{
+  float:right;
+  padding:10px;
+}
+
+.full-width-padding-10{
+  width:100%;
+  padding:10px;
+}

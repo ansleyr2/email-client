@@ -1,0 +1,13 @@
+<div>
+    <nav>
+      <a [routerLink]="['/']" routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{exact:
+true}">List</a>
+      <a [routerLink]="['/create']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:
+true}">Create</a>
+    </nav>
+
+  </div>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
